@@ -1,11 +1,3 @@
-/* Custom properties/variables  */
-:root {
-    --main-white: #f0f0f0;
-    --main-red: #be3144;
-    --main-blue: #45567d;
-    --main-gray: #303841;
-  }
-  
   /* Base reset */
   * {
     margin: 0;
@@ -172,6 +164,16 @@
   #scrollDownBottom {
     margin-top: 48%;
   }
+
+@media (max-width: 550px) {
+  .scrollDown {
+    margin-top: 70%;
+  }
+  
+  #scrollDownBottom  {
+    margin-top: 80%;
+  }
+}
 
 
 
