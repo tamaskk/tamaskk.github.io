@@ -275,6 +275,19 @@
   }
 }
 
+@media (max-width: 24.375em) {
+  .aboutMeImg {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+
+  .aboutMeText {
+    font-size: 110%;
+  }
+}
 
 
 
