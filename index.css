@@ -221,6 +221,87 @@
     margin-right: 30%;
 }
 
+/* Desktop */
+
+@media (min-width: 64em) and (max-width: 92em) {
+  .about-me {
+    width: 100%;
+  }
+
+  .aboutMeText {
+    font-size: 1.7rem;
+  }
+
+  .aboutMeImg {
+    width: 300px;
+  }
+}
+
+/* Mobile */
+
+@media (min-width: 22.5em) and (max-width: 24.19em) {
+  .about-me {
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutMeText {
+    text-align: center;
+    width: 85%;
+    font-size: 1em;
+    padding-top: 10%;
+  }
+
+  .aboutMeImg {
+    width: 250px;
+    margin-right: 14.5%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+  }
+
+  .scrollDown {
+    margin-top: 110%;
+  }
+
+  #scrollDownBottom {
+    margin-top: 125%;
+  }
+}
+
+@media (min-width: 24.19em) and (max-width: 25.875em) {
+  .about-me {
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .aboutMeText {
+    text-align: center;
+    width: 85%;
+    font-size: 1.15em;
+    padding-top: 10%;
+  }
+
+  .aboutMeImg {
+    width: 250px;
+    margin-right: 19.5%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+  }
+
+  .scrollDown {
+    margin-top: 110%;
+  }
+
+  #scrollDownBottom {
+    margin-top: 125%;
+  }
+}
+
+/*
 @media (max-width: 61.5em) {
   .about-me {
     display: block;
@@ -275,7 +356,7 @@
   }
 }
 
-@media (max-width: 24.375em) {
+@media (max-width: 25.875em) {
   .aboutMeImg {
     position: absolute;
     top: 200%;
@@ -288,7 +369,7 @@
     font-size: 110%;
   }
 }
-
+*/
 
 
   
