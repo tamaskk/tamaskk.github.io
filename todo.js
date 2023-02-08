@@ -26,9 +26,11 @@ button.addEventListener("click", function() {
 
     taskElement.setAttribute("class", "mainContainer");
     taskElement.style.display = "flex";
+    taskElement.style.borderBottom = "1px solid lightgrey";
+    taskElement.style.alignItems = "center";
 
     textElement.setAttribute("class", "textContainer");
-    textElement.style.width = "78%";
+    textElement.style.width = "68%";
 
     buttonElement.setAttribute("class", "buttonContainer");
     buttonElement.style.width = "20%";
