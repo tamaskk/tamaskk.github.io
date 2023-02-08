@@ -20,16 +20,10 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100%;
-    border: solid 1px red;
 }
 
 .input {
-    border: 1px solid black;
     flex-basis: 43%;
-}
-
-.submit {
-    border: 1px solid black;
 }
 
 .introduceText {
