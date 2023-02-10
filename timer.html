@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/timer.css">
+    <link rel="stylesheet" href="timer.css">
     <title>Timer</title>
 </head>
 <body>
-    <h1>Timer</h1> <br>
-
+    <div class="header">
+        <h1>Timer</h1> <br>
+    </div>
     <div class="time">
-    <p><span id="hours">00</span>:</p>
-    <p><span id="minutes">00</span>:</p>
-    <p><span id="seconds">00</span>:</p>
-    <p><span id="milliseconds">000</span></p><br>
+    <p><span id="hours">00</span> :</p>
+    <p><span id="minutes">00</span> :</p>
+    <p><span id="seconds">00</span> :</p>
+    <p><span id="milliseconds">00</span></p><br>
     </div>
     
-    <div class="buttons">
-    <button id="startBtn">Start</button>
-    <button id="stopBtn">Stop</button>
-    <button id="resetBtn">Reset</button>
+    <div class="container">
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
     </div>
 
-    <script src="js/timer.js"></script>
+    <script src="timer.js"></script>
 </body>
 </html>
