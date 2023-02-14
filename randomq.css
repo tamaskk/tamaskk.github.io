@@ -84,14 +84,14 @@ body {
 }
 
 .quotes {
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 85vw;
     text-align: center;
     font-style: italic;
 }
 
 .author {
-    font-size: 1.2em;
+    font-size: 1.0em;
     margin-top: 30px;
     color: gray;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .quotes {
-    font-size: 1.2em;
+    font-size: 1.0em;
     width: 85vw;
     text-align: center;
     font-style: italic;
