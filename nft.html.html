@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 360px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 5px 10px 0;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card .nft-pic {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .name {
+    font-size: 23px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .name, .descibe, .price, hr, .creator {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name, .descibe, .price, .creator {
+    padding: 20px 0;
+  }
+
+  .describe {
+    line-height: 1.7rem;
+    font-weight: 300;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .price div {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  }
+
+  hr {
+   border-color: hsl(215, 32%, 27%);
+  }
+
+  .time {
+    justify-content: flex-end;
+  }
+
+  .eth-pic {
+    width: 7%;
+  }
+
+  .time-left {
+    padding-left: 5px;
+  }
+
+  .time-pic {
+    width: 13%;
+  }
+
+  .creator {
+    display: flex;
+  }
+
+  .creator img {
+    width: 3rem;
+    border: 1px white solid;
+    border-radius: 50%;
+  }
+
+  .creator p {
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .eth-price {
+    color: hsl(178, 100%, 50%);
+    padding-left: 10px;
+  }
+
+  .creator span {
+    color: #fff;
+  }
+  
+</style>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="images/image-equilibrium.jpg" alt="" class="nft-pic">
+      <div class="text">
+        <h3 class="name">Equilibrium #3429</h3>
+        <p class="describe">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="price">
+          <div>
+          <img src="images/icon-ethereum.svg" alt="" class="eth-pic"><p class="eth-price">0.041 ETH</p>
+          </div>
+          <div class="time">
+          <img src="images/icon-clock.svg" alt="" class="time-pic"><p class="time-left">3 days left</pc>
+          </div>
+          </div>
+        <hr>
+        <div class="creator">
+          <img src="images/image-avatar.png" alt=""><p class="creator-text">Creation of <span class="creator-name">Jules Wyvern</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
