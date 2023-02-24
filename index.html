@@ -51,7 +51,6 @@ font-family: 'Lexend Deca', sans-serif; */
         
         .text {
             width: 35%;
-            max-width: 50%;
             padding-top: 60px;
             padding-left: 60px;
             padding-right: 110px;
@@ -101,10 +100,6 @@ font-family: 'Lexend Deca', sans-serif; */
           font-weight: 400;
         }
 
-        .mobileimage {
-
-        }
-
 
         @media (max-width: 1028px) {
           * {
@@ -114,6 +109,7 @@ font-family: 'Lexend Deca', sans-serif; */
 
           body {
             margin: 0 auto;
+            width: 100vw;
           }
 
           .card {
@@ -125,11 +121,60 @@ font-family: 'Lexend Deca', sans-serif; */
             display: none;
           }
 
+          .container {
+            padding-left: 150%;
+            width: 100vw;
+          }
+
           .mobile-image {
             display: block;
             background-image: url(images/image-header-mobile.jpg);
             width: 650px;
             height: 480px;
+            border-radius: 20px 20px 0 0;
+          }
+
+          .mobile-overlay {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(168, 88, 218, 0.5);
+            border-radius: 0 10px 10px 0;
+          }
+          
+          .text {
+            width: 44.45%;
+            height: 220%;
+            display: block;
+            padding: 60px auto 40px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+          }
+
+          .text h1 {
+            font-size: 3.5rem;
+            padding-bottom: 40px;
+          }
+
+          .text p {
+            font-size: 1.7rem;
+          }
+
+          .results {
+            display: block;
+            padding-left: 40px;
+          }
+
+          .space {
+            padding: 0;
+            padding-bottom: 50px;
+          }
+
+          .results h2 {
+            font-size: 2.7rem;
+          }
+
+          .results span {
+            font-size: 1.1rem;
           }
         }
 
