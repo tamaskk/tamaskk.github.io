@@ -123,12 +123,38 @@
     color: #fff;
   }
 
+  .nft-pic:hover {
+    background: #ff2fff;
+  }
+
+  .layover {
+    background-color: hsla(178, 100%, 50%);
+    position: absolute;
+    top: 134px;
+    left: 317px;
+    border-radius: 10px;
+    width: 324px;
+    height: 324px;
+    opacity: 0.7;
+    display: none;
+  }
+
+  .layover img {
+    position: absolute;
+    left: 138px;
+    top: 138px;
+    opacity: 1;
+  }
+
   
 </style>
 <body>
   <div class="container">
     <div class="card">
       <img src="images/image-equilibrium.jpg" alt="" class="nft-pic">
+      <div class="layover">
+        <img src="images/icon-view.svg" alt="">
+      </div>
       <div class="text">
         <h3 class="name">Equilibrium #3429</h3>
         <p class="describe">Our Equilibrium collection promotes balance and calm.</p>
@@ -142,10 +168,45 @@
           </div>
         <hr>
         <div class="creator">
-          <img src="images/image-avatar.png" alt=""><p class="creator-text">Creation of <span>Jules Wyvern</span></p>
+          <img src="images/image-avatar.png" alt=""><p class="creator-text">Creation of <span class="creator-name">Jules Wyvern</span></p>
         </div>
       </div>
     </div>
   </div>
+
+<script>
+let overDiv = document.getElementsByClassName("nft-pic")
+let display = document.getElementsByClassName("layover");
+let title = document.getElementsByClassName("name");
+let creator = document.getElementsByClassName("creator-name");
+
+for(let i = 0; i < overDiv.length; i++) {
+overDiv[i].addEventListener("mouseover", function() {
+display[i].style.display = "block";
+title[i].style.color = "hsl(178, 100%, 50%)";
+creator[i].style.color = "hsl(178, 100%, 50%)";
+});
+
+display[i].addEventListener("mouseover", function() {
+display[i].style.display = "block";
+title[i].style.color = "hsl(178, 100%, 50%)";
+creator[i].style.color = "hsl(178, 100%, 50%)";
+});
+
+display[i].addEventListener("mouseout", function() {
+  display[i].style.display = "none";
+title[i].style.color = "white";
+creator[i].style.color = "white";
+});
+
+
+overDiv[i].addEventListener("mouseout", function() {
+display[i].style.display = "none";
+title[i].style.color = "white";
+creator[i].style.color = "white";
+});
+}
+</script>
+
 </body>
 </html>
