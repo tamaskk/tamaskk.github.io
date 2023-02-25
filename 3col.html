@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+    /*
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-size: 15px;
+      font-family: 'Lexend Deca', sans-serif;
+      height: 100vh;
+    }
+
+    .container {
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 52.5%;
+      max-width: 80%;
+    }
+
+    .first-div {
+      background-color: hsl(31, 77%, 52%);
+      border-radius: 10px 0 0 10px;
+    }
+
+    .second-div {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .third-div {
+      background-color: hsl(179, 100%, 13%);
+      border-radius: 0 10px 10px 0;
+    } 
+
+    .first-div, .second-div, .third-div {
+      width: 70%;
+      height: 410px;
+      max-height: 50%;
+      padding: 50px;
+      max-width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .first-div h2, .second-div h2, .third-div h2 {
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      font-size: 2.5rem;
+      padding-bottom: 30px;
+    } 
+
+    .first-div img, .second-div img, .third-div img {
+      padding-bottom: 20px;
+    }
+
+    .first-div p, .second-div p, .third-div p {
+      color: hsla(0, 0%, 100%, 0.75);
+      line-height: 1.75;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+    
+    .first-div button, .second-div button, .third-div button {
+      text-decoration: none;
+      border: none;
+      background-color: white;
+      width: 170px;
+      padding: 15px;
+      border-radius: 40px;
+      margin-top: 90px;
+    }
+
+    .first-div a, .second-div a, .third-div a {
+      text-decoration: none;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .first-div a {
+      color: hsl(31, 77%, 52%);
+    }
+
+    .second-div a {
+      color: hsl(184, 100%, 22%);
+    }
+
+    .third-div a {
+      color: hsl(179, 100%, 13%);
+    }
+
+    @media (max-width: 1028px) {
+      .grid {
+        display: block;
+      }
+
+      .first-div, .second-div, .third-div { 
+        border-radius: 0;
+      }
+
+      .first-div {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .third-div {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        height: 100vh;
+        margin: 0 auto;
+      }
+      
+      .first-div p, .second-div p, .third-div p { 
+        font-size: 12px;
+      }
+
+      .grid {
+      justify-content: center;
+      margin: 0 auto;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .first-div, .second-div, .third-div {
+        width: 90%;
+      }
+      
+    }
+  </style>
+
+  <div class="container">
+
+    <div class="grid">
+      <div class="first-div">
+        <img src="images/icon-sedans.svg" alt="">
+        <h2>Sedans</h2>
+        <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+          or on your next road trip.</p>
+        <button><a href="">Learn More</a></button>
+      </div>
+      <div class="second-div">
+        <img src="images/icon-suvs.svg" alt="">
+        <h2>Suvs</h2>
+        <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+          and off-road adventures.</p>
+        <button><a href="">Learn More</a></button>
+      </div>
+      <div class="third-div">
+        <img src="images/icon-luxury.svg" alt="">
+        <h2>Luxury</h2>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+          rental and arrive in style.</p>
+        <button><a href="">Learn More</a></button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
