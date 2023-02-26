@@ -201,7 +201,7 @@ let button = document.getElementsByClassName("nav-button")[0]; // select the fir
 let ul = document.getElementsByClassName("nav-ul")[0];
 let li = document.getElementsByClassName("");
 
-button.addEventListener("mouseover", () => {
+button.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
     button.style.height = "50px";
     button.style.width = "50px";
@@ -224,7 +224,7 @@ button.addEventListener("mouseover", () => {
     }
 });
 
-button.addEventListener("mouseout", () => {
+button.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
         button.style.height = "40px";
         button.style.width = "40px";
@@ -245,7 +245,7 @@ button.addEventListener("mouseout", () => {
     button.style.borderRadius = "100%";
 });
 
-ul.addEventListener("mouseover", () => {
+ul.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
 
     } else if (window.innerWidth < 414) {
@@ -259,7 +259,7 @@ ul.addEventListener("mouseover", () => {
     ul.style.visibility = "visible"
 });
 
-ul.addEventListener("mouseout", () => {
+ul.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
 
     } else if (window.innerWidth < 414) {
