@@ -100,7 +100,7 @@
             padding: 5px;
             border-radius: 100%;
             width: 65px;
-            height: 65px;
+            height:65px;
             margin-top: 0px;
             border: none;
             color: white;
@@ -130,18 +130,6 @@
             }
         }
 
-        @media (max-width: 567px) {
-            .nav-ul {
-                height: 45px;
-                font-size: 0.75rem;
-            }
-
-            .nav-button {
-                width: 45px;
-                height: 45px;
-            }
-        }
-
         @media (max-width: 414px) {
             .header-content {
                 width: 275px;
@@ -153,8 +141,8 @@
             }
 
             .nav-button {
-                width: 30px;
-                height: 30px;
+                width: 50px;
+                height: 50px;
             }
 
             .nav-ul {
@@ -199,78 +187,51 @@
 
 let button = document.getElementsByClassName("nav-button")[0]; // select the first element with class name "asd"
 let ul = document.getElementsByClassName("nav-ul")[0];
-let li = document.getElementsByClassName("");
+let isVisible = false;
+
+button.addEventListener("click", () => {
+    if (window.innerWidth > 1024) {
+    if (!isVisible) {
+      // Show the ul element
+      ul.style.visibility = "visible";
+      ul.style.height = "70px"
+      button.style.height = "70px"
+      button.style.width = "70px";
+      button.style.borderRadius = "0px 90px 90px 0px";
+      isVisible = true;
+    } else {
+      // Hide the ul element
+      ul.style.visibility = "hidden";
+      ul.style.height = "70px"
+      button.style.height = "70px"
+      button.style.width = "70px";
+      button.style.borderRadius = "100%";
+      isVisible = false;
+    }
+  }
+});
 
 button.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
-    button.style.height = "50px";
-    button.style.width = "50px";
-    button.style.borderRadius = "0px 90px 90px 0px";
-    ul.style.visibility = "visible"
-    button.style.transition = "transition-timing-function: linear";
-    } else if (window.innerWidth < 414) {
-        button.style.height = "30px";
-        button.style.width = "30px";
-        ul.style.height = "100px";
-        button.style.borderRadius = "0px 90px 90px 0px";
-        ul.style.visibility = "visible"
-        button.style.transition = "transition-timing-function: linear";
-
+    if (!isVisible) {
+      // Show the ul element
+      ul.style.visibility = "visible";
+      ul.style.height = "50px"
+      button.style.height = "50px"
+      button.style.width = "50px";
+      button.style.borderRadius = "0px 90px 90px 0px";
+      isVisible = true;
     } else {
-    button.style.width = "70px";
-    button.style.borderRadius = "0px 90px 90px 0px";
-    ul.style.visibility = "visible"
-    button.style.transition = "transition-timing-function: linear";
+      // Hide the ul element
+      ul.style.visibility = "hidden";
+      ul.style.height = "50px"
+      button.style.height = "50px"
+      button.style.width = "50px";
+      button.style.borderRadius = "100%";
+      isVisible = false;
     }
+  }
 });
-
-button.addEventListener("click", () => {
-    if (window.innerWidth < 1024) {
-        button.style.height = "40px";
-        button.style.width = "40px";
-        button.style.borderRadius = "0px 90px 90px 0px";
-        ul.style.visibility = "visible"
-    } else if (window.innerWidth < 414) {
-        button.style.height = "30px";
-        button.style.width = "30px";
-        button.style.borderRadius = "0px 90px 90px 0px";
-        ul.style.visibility = "visible"
-    } else {
-        button.style.height = "30px";
-        button.style.width = "30px";
-        ul.style.visibility = "hidden"
-        button.style.borderRadius = "100%";
-    }
-    ul.style.visibility = "hidden"
-    button.style.borderRadius = "100%";
-});
-
-ul.addEventListener("click", () => {
-    if (window.innerWidth < 1024) {
-
-    } else if (window.innerWidth < 414) {
-
-    } else {
-        
-    }
-    button.style.padding = "20px";
-    button.style.width = "70px";
-    button.style.borderRadius = "0px 90px 90px 0px";
-    ul.style.visibility = "visible"
-});
-
-ul.addEventListener("click", () => {
-    if (window.innerWidth < 1024) {
-
-    } else if (window.innerWidth < 414) {
-
-    } else {
-        
-    }
-    ul.style.visibility = "hidden"
-    button.style.borderRadius = "100%";
-});
-
 
    </script>
    <script src="https://kit.fontawesome.com/19807acfb1.js" crossorigin="anonymous"></script>
