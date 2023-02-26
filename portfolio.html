@@ -104,6 +104,9 @@
             margin-top: 0px;
             border: none;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
 
@@ -199,19 +202,43 @@ let ul = document.getElementsByClassName("nav-ul")[0];
 let li = document.getElementsByClassName("");
 
 button.addEventListener("mouseover", () => {
+    if (window.innerWidth < 1024) {
+    button.style.padding = "20px";
+    button.style.width = "50px";
+    button.style.borderRadius = "0px 90px 90px 0px";
+    ul.style.visibility = "visible"
+    button.style.transition = "transition-timing-function: linear";
+    } else if (window.innerWidth < 414) {
+
+    } else {
     button.style.padding = "20px";
     button.style.width = "70px";
     button.style.borderRadius = "0px 90px 90px 0px";
     ul.style.visibility = "visible"
     button.style.transition = "transition-timing-function: linear";
+    }
 });
 
 button.addEventListener("mouseout", () => {
+    if (window.innerWidth < 1024) {
+
+    } else if (window.innerWidth < 414) {
+
+    } else {
+        
+    }
     ul.style.visibility = "hidden"
     button.style.borderRadius = "100%";
 });
 
 ul.addEventListener("mouseover", () => {
+    if (window.innerWidth < 1024) {
+
+    } else if (window.innerWidth < 414) {
+
+    } else {
+        
+    }
     button.style.padding = "20px";
     button.style.width = "70px";
     button.style.borderRadius = "0px 90px 90px 0px";
@@ -219,6 +246,13 @@ ul.addEventListener("mouseover", () => {
 });
 
 ul.addEventListener("mouseout", () => {
+    if (window.innerWidth < 1024) {
+
+    } else if (window.innerWidth < 414) {
+
+    } else {
+        
+    }
     ul.style.visibility = "hidden"
     button.style.borderRadius = "100%";
 });
