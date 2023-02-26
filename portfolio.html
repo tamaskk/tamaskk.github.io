@@ -203,15 +203,19 @@ let li = document.getElementsByClassName("");
 
 button.addEventListener("mouseover", () => {
     if (window.innerWidth < 1024) {
-    button.style.padding = "20px";
+    button.style.height = "50px";
     button.style.width = "50px";
     button.style.borderRadius = "0px 90px 90px 0px";
     ul.style.visibility = "visible"
     button.style.transition = "transition-timing-function: linear";
     } else if (window.innerWidth < 414) {
+        button.style.height = "30px";
+        button.style.width = "30px";
+        button.style.borderRadius = "0px 90px 90px 0px";
+        ul.style.visibility = "visible"
+        button.style.transition = "transition-timing-function: linear";
 
     } else {
-    button.style.padding = "20px";
     button.style.width = "70px";
     button.style.borderRadius = "0px 90px 90px 0px";
     ul.style.visibility = "visible"
@@ -221,11 +225,20 @@ button.addEventListener("mouseover", () => {
 
 button.addEventListener("mouseout", () => {
     if (window.innerWidth < 1024) {
-
+        button.style.height = "40px";
+        button.style.width = "40px";
+        button.style.borderRadius = "0px 90px 90px 0px";
+        ul.style.visibility = "visible"
     } else if (window.innerWidth < 414) {
-
+        button.style.height = "30px";
+        button.style.width = "30px";
+        button.style.borderRadius = "0px 90px 90px 0px";
+        ul.style.visibility = "visible"
     } else {
-        
+        button.style.height = "30px";
+        button.style.width = "30px";
+        ul.style.visibility = "hidden"
+        button.style.borderRadius = "100%";
     }
     ul.style.visibility = "hidden"
     button.style.borderRadius = "100%";
