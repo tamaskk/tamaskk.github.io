@@ -18,16 +18,17 @@
         body {
             font-family: 'Montserrat', sans-serif;
             font-size: 15px;
+            background-color: black;
         }
 
-        img {
-            width: 99.1vw;
-            height: 100vh;
+        nav {
+            display: flex;
+            margin-left: 0px;
+            justify-content: flex-end;
         }
 
         .container {
             margin: 0;
-            padding-left: -5px;
             
         }
 
@@ -49,6 +50,9 @@
             height: 100vh;
             background-image: url(backg.jpg);
             background-size: 99.1vw 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
 
@@ -63,56 +67,104 @@
             height: 250px;
             border-radius: 50px;
             margin: 0 auto;
-            margin-top: 250px;
-
-            
+            margin-top: 250px; 
         }
 
-ul {
-    display: flex;
-    visibility: hidden;
-    align-items: center;
-    list-style: none;
-    color: black;
-    border: 1px solid white;
-    border-radius: 90px 0px 0px 90px;
-    width: 525px;
-    height: 65px;
-    background-color: white;
-    transition: width 2s;
-    transition-timing-function: linear;
-}
+        .nav-ul {
+            display: flex;
+            visibility: hidden;
+            align-items: center;
+            list-style: none;
+            color: white;
+            border: none;
+            border-radius: 90px 0px 0px 90px;
+            width: 525px;
+            height: 65px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: width 2s;
+            transition-timing-function: linear;
+        }
 
-body {
-    background-color: black;
-}
+        .nav-li {
+            margin-right: 50px;
+        }
 
-li {
-    margin-right: 50px;
-}
+        .nav-li:hover {
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-li:hover {
-    padding: 10px;
-    border-radius: 20px;
-    background-color: lightgrey;
-    
-}
+        .nav-button {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            border-radius: 100%;
+            width: 65px;
+            height: 65px;
+            margin-top: 0px;
+            border: none;
+            color: white;
+        }
 
-nav {
-    display: flex;
-    margin-left: 0px;
-    justify-content: flex-end;
-}
 
-button {
-    background-color: white;
-    padding: 5px;
-    border-radius: 100%;
-    width: 70px;
-    height: 65px;
-    margin-top: 0px;
-    border: none;
-}
+        @media (max-width: 1024px) {
+            .header-content {
+                width: 400px;
+                height: 200px;
+            }
+
+            .header-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .nav-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .nav-ul {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 567px) {
+            .nav-ul {
+                height: 45px;
+                font-size: 0.75rem;
+            }
+
+            .nav-button {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 414px) {
+            .header-content {
+                width: 275px;
+                height: 150px;
+            }
+
+            .header-content h1 {
+                font-size: 3rem;
+            }
+
+            .nav-button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .nav-ul {
+                width: 320px;
+                height: 40px;
+                font-size: 0.6rem;
+                overflow:scroll ;
+            }
+
+            .nav-li {
+                margin-right: 20px;
+            }
+        }
 
 
     </style>
@@ -125,13 +177,13 @@ button {
    <div class="container">
         <div class="header-container">
             <nav>
-                <ul class="ul">
-                    <li class="li">Home</li>
-                    <li class="li">Introduce</li>
-                    <li class="li">Project</li>
-                    <li class="li">Contant me</li>
+                <ul class="nav-ul">
+                    <li class="nav-li">Home</li>
+                    <li class="nav-li">Introduce</li>
+                    <li class="nav-li">Project</li>
+                    <li class="nav-li">Contant me</li>
                 </ul>
-                <button class="button"><i class="fa-solid fa-bars"></i></button>
+                <button class="nav-button"><i class="fa-solid fa-bars"></i></button>
             </nav>
             <div class="header-content">
                 <h1>I'm Tamas</h1>
@@ -142,8 +194,8 @@ button {
 
    <script>
 
-let button = document.getElementsByClassName("button")[0]; // select the first element with class name "asd"
-let ul = document.getElementsByClassName("ul")[0];
+let button = document.getElementsByClassName("nav-button")[0]; // select the first element with class name "asd"
+let ul = document.getElementsByClassName("nav-ul")[0];
 let li = document.getElementsByClassName("");
 
 button.addEventListener("mouseover", () => {
