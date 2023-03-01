@@ -13,6 +13,7 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     font-size: 15px;
     background-color: black;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -27,7 +29,7 @@ nav {
     justify-content: flex-end;
 }
 
-nav a, nav li {
+nav a, nav li, a {
     color: white;
     text-decoration: none;
 }
@@ -262,6 +264,7 @@ nav a, nav li {
     margin-left: 60px;
     margin-right: 60px;
     box-shadow: #1f1f1f 10px 2px 20px 5px;
+    cursor: pointer;
 }
 
 .projects img {
@@ -286,6 +289,13 @@ nav a, nav li {
     text-align: center;
     font-size: 30px;
     padding-top: 10px;
+}
+
+.project-text {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    padding-bottom: 200px;
 }
 
 
@@ -450,19 +460,19 @@ nav a, nav li {
 }
 
 .projects {
-    width: 300px;
+    width: 250px;
     background: black;
     color: white;
     border-radius: 50% 50% 20px 20px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: #1f1f1f 10px 2px 20px 5px;
     margin-top: 0;
 }
 
 .projects img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     object-position: center;
     border-radius: 49% 49% 0 0;
@@ -478,8 +488,20 @@ nav a, nav li {
     margin-top: 0;
 }
 
+.to-do, .random-quote, .weather-app {
+    margin-left: 30px;
+}
+
+.stopwatch, .to-do, .timer, .random-quote {
+    margin-bottom: 50px;
+}
+
 .timer {
     height: 501px;
+}
+
+#below-row-projects {
+    margin-top: 0px;
 }
     }
 
@@ -653,8 +675,8 @@ nav a, nav li {
     background: black;
     color: white;
     border-radius: 50% 50% 20px 20px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: #1f1f1f 10px 2px 20px 5px;
     margin-top: 0;
 }
@@ -677,25 +699,30 @@ nav a, nav li {
     margin-top: 0;
 }
 
+.stopwatch, .to-do, .timer, .random-quote, .school-system {
+    margin-bottom: 50px;
+}
+
 .timer {
     height: 501px;
 }
+
 }
 
             
     </style>
 
-    <div class="header-container">
+    <div class="header-container" id="home">
         <nav>
             <ul class="nav-ul">
-                <li class="nav-li">Home</li>
+                <li class="nav-li"><a href="#home">Home</a></li>
                 <li class="nav-li"><a href="#introduce">Introduce</a></li>
-                <li class="nav-li">Project</li>
-                <li class="nav-li">Contant me</li>
+                <li class="nav-li"><a href="#projects">Projects</a></li>
+                <li class="nav-li"><a href="#contact-me">Contact me!</a></li>
             </ul>
             <button class="nav-button"><i class="fa-solid fa-bars"></i></button>
         </nav>
-        <div class="header-content">
+        <div class="header-content"> 
             <h1>I'm Tamas</h1>
             <h3>a Front-End developer.</h3>
         </div>
@@ -727,14 +754,16 @@ nav a, nav li {
         </div>
     </div>
 
+    <h1 class="project-text" id="projects">My projects</h1>
+
     <div class="project-container">
         <div class="project-content">
-            <div class="projects">
+            <div class="projects stopwatch">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stopwatch%2C_1810201155%2C_ako.jpg/1200px-Stopwatch%2C_1810201155%2C_ako.jpg">
                 <h3>Stopwatch</h3>
                 <p>Simple stopwatch with 3 buttons. Start, stop and reset.</p>
             </div>
-            <div class="projects middle-project">
+            <div class="projects middle-project to-do">
                 <img src="https://www.jotform.com/blog/wp-content/uploads/2018/08/to-do-list-compressor.jpg">
                 <h3>To-Do</h3>
                 <p>I made the To-Do list with HTML, CSS and JS combination. Easy application what can be used as a daily application.</p>
@@ -749,12 +778,12 @@ nav a, nav li {
                 <h3>Random Quote Machine</h3>
                 <p>With button click generate a new quote with the author and change the background color aswell!</p>
             </div>
-            <div class="projects middle-project" id="below-row-projects">
+            <div class="projects middle-project school-system" id="below-row-projects">
                 <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/School-Clipart/School_Board_Wallpaper.jpg?m=1507172109">
                 <h3>School system</h3>
                 <p>Coming soon...</p>
             </div>
-            <div class="projects" id="below-row-projects">
+            <div class="projects weather-app" id="below-row-projects">
                 <img src="https://wallpaper.dog/large/20542257.jpg">
                 <h3>Weather App</h3>
                 <p>Coming soon...</p>
@@ -762,7 +791,7 @@ nav a, nav li {
         </div>
     </div>
 
-    <div id="contact" class="contact-section">
+    <div id="contact-me" class="contact-section">
         <div class="contact-section-header">
           <h2>Start our journey tomorrow...</h2>
           <p>How do you like your coffee? I do with 2 sugars and a bit of milk.</p>
