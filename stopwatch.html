@@ -4,29 +4,203 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stopwatch.css">
-    <title>StopWatch</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Stop watch</h1> <br>
-    </div>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
 
-        <div class="time">
-            <p><span id="hours">00</span>:</p>
-            <p><span id="minutes">00</span>:</p>
-            <p><span id="seconds">00</span></p>
-        </div>
-    
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-image: url(background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .content {
+            width: 500px;
+            height: 300px;
+        }
+
+        .time {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 6.5%;
+            padding-top: 50px;
+            border: 1px solid red;
+        }
+
+        .hourDiv, .minuteDiv, .secondDiv, .millisecondDiv {
+            background-color: #05102e;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hour, .minute, .second, .millisecond {
+            font-size: 2.5rem;
+        }
+
+        .button {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            border: 1px solid red;
+        }
+
+        .start, .stop, .reset {
+            background-color: #05102e;
+            color: white;
+            border: none;
+            padding: 20px;
+            width: 150px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .hourDiv:hover, .minuteDiv:hover, .secondDiv:hover, .millisecondDiv:hover, .start:hover, .stop:hover, .reset:hover{
+            background-color: #071742;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                align-items: flex-start;
+            }
+            .time {
+                grid-template-columns: 1fr 1fr;
+                padding-top: 0;
+                height: 225px;
+            }
+
+            .content {
+                width: 250px
+            }
+
+            .button {
+                display: block;
+                height: 225px;
+                padding-top: 50px;
+            }
+
+            .start, .stop, .reset { 
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .minuteDiv, .millisecondDiv {
+                margin-left: 20px;
+            }
+
+            .container {
+                margin-top: 175px;
+            }
+        }
+    </style>
+
     <div class="container">
-        <div class="buttons">
-            <button id="startBtn">Start</button>
-            <button id="stopBtn">Stop</button>
-            <button id="resetBtn">Reset</button>
+        <div class="content">
+            <div class="time">
+                <div class="hourDiv">
+                    <p class="hour">00</p>
+                    <p class="hourText">Hours</p>
+                </div>
+                <div class="minuteDiv">
+                    <p class="minute">00</p>
+                    <p class="minuteText">Minutes</p>
+                </div>
+                <div class="secondDiv">
+                    <p class="second">00</p>
+                    <p class="secondText">Seconds</p>
+                </div>
+                <div class="millisecondDiv">
+                    <p class="millisecond">00</p>
+                    <p class="millisecondText">Milliseconds</p>
+                </div>
+            </div>
+            <div class="button">
+                <button class="start">Start</button>
+                <button class="stop">Stop</button>
+                <button class="reset">Resest</button>
+            </div>
         </div>
     </div>
 
+    <script>
 
-   <script src="stopwatch.js"></script>
+let milliseconds = document.getElementsByClassName('millisecond');
+let seconds = document.getElementsByClassName('second');
+let minutes = document.getElementsByClassName('minute');
+let hours = document.getElementsByClassName('hour');
+
+let start = document.getElementsByClassName('start');
+let stopBtn = document.getElementsByClassName('stop');
+let reset = document.getElementsByClassName('reset');
+
+let interval;
+
+reset.addEventListener("click", function() {
+    milliseconds.innerHTML = "00"
+    seconds.innerHTML = "00";
+    minutes.innerHTML = "00";
+    hours.innerHTML = "00";
+    clearInterval(interval);
+});
+
+start.addEventListener("click", function() {
+    clearInterval(interval);
+    interval = setInterval(startTimer, 10);
+});
+
+stopBtn.addEventListener("click", function() {
+    clearInterval(interval);
+});
+
+function startTimer() {
+    let mls = parseInt(milliseconds.innerHTML);
+    let sec = parseInt(seconds.innerHTML);
+    let min = parseInt(minutes.innerHTML);
+    let hrs = parseInt(hours.innerHTML);
+
+    mls++;
+    if (mls == 99) {
+        mls = 0;
+        sec++;
+        if (sec == 59) {
+            sec = 0;
+            min++;
+            if (min == 59) {
+                min = 0;
+                hrs++;
+            }
+        }
+    }
+    milliseconds.innerHTML = (mls < 10 ? "0" : "") + mls;
+    minutes.innerHTML = (min < 10 ? "0" : "") + min;
+    hours.innerHTML = (hrs < 10 ? "0" : "") + hrs;
+    seconds.innerHTML = (sec < 10 ? "0" : "") + sec;
+}
+    </script>
 </body>
 </html>
