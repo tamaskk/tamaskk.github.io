@@ -238,14 +238,7 @@
             <span id="datetime"></span>
         </div>
         <div class="tasks">
-            <div class="task-content">
-                <div class="text">
-                <p class="task-text">21 days to code</p>
-            </div>
-                <div class="buttons">
-                <button class="done"><i class="fa-solid fa-check"></i></button>
-                <button onclick="del()" class="delete"><i class="fa-solid fa-trash"></i></button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -261,6 +254,15 @@
         let button = document.querySelector('.button');
 
         button.addEventListener("click", function() {
+
+            var taskinput = document.querySelector("#input");
+            let taskValue = taskinput.value;
+
+            if (taskValue === "") {
+        alert("Do you have to do nothing?");
+        return;
+    };
+            
             let tasks = document.querySelector('.tasks')
             let taskContent = document.createElement("div");
             taskContent.setAttribute("class", "task-content");
@@ -275,12 +277,11 @@
             taskContent.appendChild(textDiv);
             taskContent.appendChild(buttonDiv);
 
-            var taskinput = document.querySelector("#input");
-            let taskValue = taskinput.value;
             let text = document.createElement("p");
             text.setAttribute("class", "task-text");
             text.innerHTML = taskValue;
             textDiv.appendChild(text);
+            text.style.textDecoration = "none";
 
             let buttonOne = document.createElement("button");
             let buttonTwo = document.createElement("button");
@@ -288,18 +289,23 @@
             buttonOne.innerHTML = "<i class=\"fa-solid fa-check\"></i>"
             buttonTwo.innerHTML = "<i class=\"fa-solid fa-trash\"></i>"
 
-            buttonOne.setAttribute("onclick", "done()");
+            buttonOne.addEventListener("click", function(e) {
+                if (text.style.textDecoration === "none") {
+                    text.style.textDecoration = "line-through"
+                } else {
+                text.style.textDecoration = "none"
+                }
+            })
+
+            buttonTwo.addEventListener("click", function(e) {
+                taskContent.remove();
+            })
 
             buttonDiv.appendChild(buttonOne);
             buttonDiv.appendChild(buttonTwo);
         });
 
 
-        let doneBtn = document.getElementsByClassName('done');
-
-        doneBtn.addEventListener("click", function() {
-            console.log("asd")
-        })
 
     </script>
 
