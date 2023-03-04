@@ -112,7 +112,7 @@
             }
 
             .container {
-                margin-top: 125px;
+                margin-top: 175px;
             }
         }
     </style>
@@ -147,22 +147,24 @@
 
     <script>
 
-let milliseconds = document.getElementsByClassName('millisecond');
-let seconds = document.getElementsByClassName('second');
-let minutes = document.getElementsByClassName('minute');
-let hours = document.getElementsByClassName('hour');
+let millisecond = document.querySelector('.millisecond');
+let second = document.querySelector('.second');
+let minute = document.querySelector('.minute');
+let hour = document.querySelector('.hour');
 
-let start = document.getElementsByClassName('start');
-let stopBtn = document.getElementsByClassName('stop');
-let reset = document.getElementsByClassName('reset');
+let start = document.querySelector('.start');
+let stopBtn = document.querySelector('.stop');
+let reset = document.querySelector('.reset');
+
+let millisecondBasic = 0;
+let secondBasic = 0;
+let minuteBasic = 0;
+let hourBasic = 0;
 
 let interval;
 
 reset.addEventListener("click", function() {
-    milliseconds.innerHTML = "00"
-    seconds.innerHTML = "00";
-    minutes.innerHTML = "00";
-    hours.innerHTML = "00";
+    location.reload();
     clearInterval(interval);
 });
 
@@ -176,28 +178,23 @@ stopBtn.addEventListener("click", function() {
 });
 
 function startTimer() {
-    let mls = parseInt(milliseconds.innerHTML);
-    let sec = parseInt(seconds.innerHTML);
-    let min = parseInt(minutes.innerHTML);
-    let hrs = parseInt(hours.innerHTML);
-
-    mls++;
-    if (mls == 99) {
-        mls = 0;
-        sec++;
-        if (sec == 59) {
-            sec = 0;
-            min++;
-            if (min == 59) {
-                min = 0;
-                hrs++;
+    millisecondBasic++
+        if (millisecondBasic == 99) {
+            secondBasic++;
+            millisecondBasic = 0;
+            if (secondBasic == 59) {
+                minuteBasic++;
+                secondBasic = 0;
+                if (minuteBasic == 59) {
+                    hourBasic++;
+                    minuteBasic = 0;
+                }
             }
         }
-    }
-    milliseconds.innerHTML = (mls < 10 ? "0" : "") + mls;
-    minutes.innerHTML = (min < 10 ? "0" : "") + min;
-    hours.innerHTML = (hrs < 10 ? "0" : "") + hrs;
-    seconds.innerHTML = (sec < 10 ? "0" : "") + sec;
+    millisecond.innerHTML = (millisecondBasic < 10 ? "0" : "") + millisecondBasic;
+    second.innerHTML = (secondBasic < 10 ? "0" : "") + secondBasic;
+    minute.innerHTML = (minuteBasic < 10 ? "0" : "") + minuteBasic;
+    hour.innerHTML = (hourBasic < 10 ? "0" : "") + hourBasic;
 }
     </script>
 </body>
