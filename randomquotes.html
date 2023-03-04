@@ -19,9 +19,9 @@
 
         body {
             background-image: url(images/back.jpg);
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -83,6 +83,37 @@
             cursor: pointer;
             color: white;
             font-family: 'Gloock', serif;
+        }
+
+        @media (max-width: 810px) {
+            .container {
+                width: 500px;
+            }
+
+            .quotes {
+                width: 450px;
+                margin-top: 0;
+                font-size: 2rem;
+            }
+
+            hr {
+                width: 499px;
+            }
+        }
+
+        @media (max-width: 510px) {
+            .container {
+                width: 350px;
+            }
+
+            hr {
+                width: 350px;
+            }
+
+            .quotes {
+                width: 350px;
+                font-size: 1.5rem;
+            }
         }
 
 
