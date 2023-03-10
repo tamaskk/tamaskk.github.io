@@ -37,7 +37,6 @@
 
         .container {
             width: 800px;
-            min-height: 450px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -75,19 +74,22 @@
         .button {
             width: 300px;
             height: 50px;
+            padding: 50px;
             font-size: 1.25rem;
-            margin-top: 40px;
             background: none;
             border: none;
             cursor: pointer;
             color: white;
             font-family: 'Gloock', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width: 810px) {
             .container {
                 width: 500px;
-                height: 500px;
+                height: 400px;
             }
 
             .quotes {
@@ -99,12 +101,17 @@
             hr {
                 width: 499px;
             }
+
+            .button {
+                margin-top: 10px;
+            }
+
         }
 
         @media (max-width: 510px) {
             .container {
                 width: 350px;
-                height: 100px;
+                height: 300px;
             }
 
             hr {
@@ -113,13 +120,24 @@
 
             .content {
                 width: 350px;
-                height: 100px;
+                height: 300px;
             }
 
             .quotes {
                 width: 350px;
                 font-size: 1.5rem;
+                margin-top: 0;
             }
+
+            .button {
+                padding: 30px;
+                margin-top: 7.5px;
+            }
+
+            .author {
+                margin: 0 0 20px 0;
+            }
+
         }
 
 
