@@ -25,16 +25,6 @@ body {
     scroll-behavior: smooth;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav a, nav li, a {
-    color: white;
-    text-decoration: none;
-}
-
 .header-content h1 {
     font-size: 5rem;
 }
@@ -68,46 +58,67 @@ nav a, nav li, a {
     background-position: center;
 }
 
-.nav-ul {
-    display: flex;
-    visibility: hidden;
-    align-items: center;
-    list-style: none;
-    color: white;
-    border: none;
-    border-radius: 90px 0px 0px 90px;
-    width: 525px;
-    height: 70px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding-left: 30px;
-    margin: 20px 0 0 0;
-}
+.nav-div {
+		    width: 100%;
+		    display: flex;
+		    justify-content: center;
+		}
 
-.nav-li {
-    margin-right: 50px;
-    padding: 10px;
-}
+		nav {
+		    width: 575px;
+		    height: 70px;
+		    background-color: rgba(255, 255, 255, 0.2);
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    margin-top: 30px;
+		    border-radius: 40px;
 
-.nav-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px;
-    border-radius: 100%;
-    width: 70px;
-    height:70px;
-    margin-top: 0px;
-    border: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 20px 0 0;
-}
+		}
 
-.nav-li:hover {
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+		nav ul li a {
+		    color: white;
+		    text-decoration: none;
+		    font-size: 1rem;
+		    list-style: none;
+		    padding: 5px;
+		}
+
+		.li {
+		    list-style: none;
+            padding: 5px;
+		}
+
+		.li:hover {
+		    background-color: rgba(0, 0, 0, 0.384);
+		    border-radius: 40px;
+		}
+
+		nav ul {
+		    display: flex;
+		    align-items: center;
+		    padding: 0;
+		}
+
+		#nav-toggle, #nav-close {
+		    display: none;
+		}
+
+		ul img {
+		    height: 60px;
+		    margin-top: -40px;
+		    border-radius: 50px 50px 0 0;
+		}
+
+		#introduce-nav {
+		    margin-right: 40px;
+		    margin-left: 40px;
+		}
+
+		#projects-nav {
+		    margin-right: 40px;
+		    margin-left: 40px;
+		}
 
 .introduce {
             display: flex;
@@ -145,12 +156,6 @@ nav a, nav li, a {
             font-size: 1.75rem;
             font-weight: 600;
         }
-
-
-        /*            padding-top: 60px;
-            padding-left: 60px;
-            padding-right: 110px;
-            */
         
         .introduce-text h1 {
             font-size: 1.75rem;
@@ -471,40 +476,6 @@ nav a, nav li, a {
             height: 400px;
         }
 
-        .nav-ul {
-    display: flex;
-    visibility: hidden;
-    align-items: center;
-    list-style: none;
-    color: white;
-    border: none;
-    border-radius: 90px 0px 0px 90px;
-    width: 500px;
-    height: 70px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding-left: 30px;
-    margin: 20px 0 0 0;
-}
-
-.nav-li {
-    margin-right: 50px;
-    font-size: 15px;
-}
-
-.nav-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 0px;
-    border: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 20px 0 0;
-}
 .hidden-project-container {
     margin-top: 100px;
 }
@@ -693,41 +664,6 @@ nav a, nav li, a {
 }
 
 
-    .nav-ul {
-    display: flex;
-    visibility: hidden;
-    align-items: center;
-    list-style: none;
-    color: white;
-    border: none;
-    border-radius: 90px 0px 0px 90px;
-    width: 270px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding-left: 10px;
-    margin: 20px 0 0 0;
-}
-
-.nav-li {
-    margin-right: 20px;
-    font-size: 10px;
-}
-
-.nav-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 1px;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 0px;
-    border: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 20px 0 0;
-}
-
 .project-container {
     display: flex;
     justify-content: center;
@@ -789,21 +725,92 @@ nav a, nav li, a {
     height: 150px;
 }
 
+#nav-toggle {
+		        position: fixed;
+		        top: 10px;
+		        right: 10px;
+		        padding: 10px;
+		        background-color: #333;
+		        color: #fff;
+		        border: none;
+                font-size: 1.25rem;
+		    }
+
+		    #nav-close {
+		        position: fixed;
+		        top: 10px;
+		        right: 10px;
+		        padding: 10px;
+                width: 40px;
+		        font-size: 1.25rem;
+		        background-color: #333;
+		        color: #fff;
+		        border: none;
+		        display: block;
+		    }
+
+		    nav {
+		        position: fixed;
+		        top: 0;
+		        left: 0;
+		        width: 100%;
+		        height: 100%;
+		        background-color: black;
+		        display: none;
+		        margin-top: 0;
+		        border-radius: 0px;
+		    }
+
+		    nav ul {
+		        list-style: none;
+		        margin: 0;
+		        padding: 0;
+		        display: flex;
+		        flex-direction: column;
+		        height: 100%;
+		        justify-content: center;
+		        align-items: center;
+		    }
+
+		    nav ul li {
+		        margin-bottom: 20px;
+		    }
+
+		    nav ul li a {
+		        color: #fff;
+		        text-decoration: none;
+		        font-size: 24px;
+		    }
+
+		    nav.show {
+		        display: block;
+		    }
+
+		    #nav-toggle, #nav-close {
+		        display: block;
+		    }
+            ul img  {
+                display: none;
+            }
 }
 
             
     </style>
 
     <div class="header-container" id="home">
-        <nav>
-            <ul class="nav-ul">
-                <li class="nav-li"><a href="#home">Home</a></li>
-                <li class="nav-li"><a href="#introduce">Introduce</a></li>
-                <li class="nav-li"><a href="#projects">Projects</a></li>
-                <li class="nav-li"><a href="#contact-me">Contact me!</a></li>
-            </ul>
-            <button class="nav-button"><i class="fa-solid fa-bars"></i></button>
-        </nav>
+        <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-div">
+            <nav>
+                <button id="nav-close"><i class="fa-solid fa-xmark"></i></button>
+                <ul>
+                    <li class="li" id="home-nav"><a href="#" class="links">Home</a></li>
+                    <li class="li" id="introduce-nav"><a href="#" class="links">Introduce</a></li>
+                    <img src="images/logo.png" alt="">
+                    <li class="li" id="projects-nav"><a href="#projects" class="links">Projects</a></li>
+                    <li class="li" id="contact-nav"><a href="#" class="links">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="header-content"> 
             <h1>I'm Tamas</h1>
             <h3>a Front-End developer.</h3>
@@ -920,7 +927,7 @@ nav a, nav li, a {
     <div id="contact-me" class="contact-section">
         <div class="contact-section-header">
           <h2>Start our journey tomorrow...</h2>
-          <p>How do you like your coffee? I do with 2 sugars and a bit of milk.</p>
+          <p>How do you like your coffee? For me it's 2 sugars and a bit of milk.</p>
         </div>
         <div class="contact-links">
           <a
@@ -965,53 +972,25 @@ nav a, nav li, a {
     </div>
     <script>
 
-        let button = document.getElementsByClassName("nav-button")[0]; // select the first element with class name "asd"
-        let ul = document.getElementsByClassName("nav-ul")[0];
-        let isVisible = false;
-        
-        button.addEventListener("click", () => {
-            if (window.innerWidth > 1024) {
-            if (!isVisible) {
-              // Show the ul element
-              ul.style.visibility = "visible";
-              ul.style.height = "70px"
-              button.style.height = "70px"
-              button.style.width = "70px";
-              button.style.borderRadius = "0px 90px 90px 0px";
-              isVisible = true;
-            } else {
-              // Hide the ul element
-              ul.style.visibility = "hidden";
-              ul.style.height = "70px"
-              button.style.height = "70px"
-              button.style.width = "70px";
-              button.style.borderRadius = "100%";
-              isVisible = false;
-            }
-          }
-        });
-        
-        button.addEventListener("click", () => {
-            if (window.innerWidth < 1024) {
-            if (!isVisible) {
-              // Show the ul element
-              ul.style.visibility = "visible";
-              ul.style.height = "50px"
-              button.style.height = "50px"
-              button.style.width = "50px";
-              button.style.borderRadius = "0px 90px 90px 0px";
-              isVisible = true;
-            } else {
-              // Hide the ul element
-              ul.style.visibility = "hidden";
-              ul.style.height = "50px"
-              button.style.height = "50px"
-              button.style.width = "50px";
-              button.style.borderRadius = "100%";
-              isVisible = false;
-            }
-          }
-        });
+        var navToggle = document.getElementById('nav-toggle');
+		var nav = document.querySelector('nav');
+		var navClose = document.getElementById('nav-close');
+        var li = document.querySelector('li');
+
+		navToggle.addEventListener('click', function() {
+		    nav.classList.toggle('show');
+		});
+
+		navClose.addEventListener('click', function() {
+		    nav.classList.remove('show');
+		})
+
+		li.addEventListener('click', function() {
+		    nav.classList.remove('show');
+		})
+
+
+
 
 
         let showMoreBtn = document.querySelector('.show-more');
