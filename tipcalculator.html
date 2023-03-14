@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Style/images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="Style/tipcalculator.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Tip calculator with Bootstrap</title>
+</head>
+<body>
+    
+    <div class="container-sm text-center">
+        <div class="row">
+            <div class="col col-one" style="padding-left: 50px; padding-right: 50px;">
+                <div class="input-group flex-nowrap bill">
+                    <label class="bill-label">Bill</label>
+                    <div class="bill-input">
+                    <span class="input-group-text" id="addon-wrapping">$</span>
+                    <input type="number" class="form-control" id="bill-input" placeholder="Bill amount" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="tip-choose">
+                    <label id="select-label">Select tip %</label>
+                    <div class="first-line">
+                        <button type="button" value="5" class="btn btn-success button-first-row">5%</button>
+                        <button type="button" value="10" class="btn btn-success button-first-row">10%</button>
+                        <button type="button" value="15" class="btn btn-success button-first-row">15%</button>
+                    </div>
+                    <br>
+                    <div class="second-line">
+                        <button type="button" value="25" class="btn btn-success button-second-row">25%</button>
+                        <button type="button" value="50" class="btn btn-success button-second-row">50%</button>
+                        <input type="number" class="custom button-second-row" placeholder="Custom" id="custom-tip">
+                    </div>
+                </div>
+                <div class="input-group flex-nowrap bill">
+                    <label class="people-label">Number of Peoples</label>
+                    <div class="bill-input">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                    <input type="number" class="form-control" id="people-input" placeholder="Number of Peoples" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+            </div>
+            <div class="col col-two">
+                <div class="content">
+                    <div class="tip-amount">
+
+                        <p class="tip-amount-text">Tip Amount:</p>
+                        <p class="tip-amount-value">$50</p>
+
+                    </div>
+                    <div class="total-with-tip">
+
+                        <p class="total-with-tip-text">Total with tip:</p>
+                        <p class="total-with-tip-value" id="total-with-tip-value">$200</p>
+
+
+                    </div>
+                    <div class="total-per-person">
+
+                        <p class="total-per-person-text">Total per Person:</p>
+                        <p class="total-per-person-value">$50</p>
+
+                    </div>
+                    <button class="btn btn-success reset-button" id="calculate-button">Calculate</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts for the Bootstrap -->
+
+    <script src="https://kit.fontawesome.com/19807acfb1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+        
+        let button = document.querySelector('#calculate-button');
+
+        button.addEventListener("click", function() {
+            let billValue = document.querySelector('#bill-input').value;
+            console.log("asd")
+            console.log(billValue);
+        })
+    </script>
+</body>
+</html>

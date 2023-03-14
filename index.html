@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="icon" href="Style/images/fav.png" type="image/x-icon">
+    <title>TKK Portfolio</title>
+</head>
+<body>
+    
+<!-- Header section with the navigation bar -->
+
+    <div class="header-container" id="home">
+        <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-div">
+            <nav>
+                <button id="nav-close"><i class="fa-solid fa-xmark"></i></button>
+                <ul>
+                    <li class="li" id="home-nav"><a href="#" class="links">Home</a></li>
+                    <li class="li" id="introduce-nav"><a href="#" class="links">Introduce</a></li>
+                    <img src="images/logo.png" alt="">
+                    <li class="li" id="projects-nav"><a href="#projects" class="links">Projects</a></li>
+                    <li class="li" id="contact-nav"><a href="#" class="links">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1>I'm Tamas</h1>
+            <h3>a Front-End developer.</h3>
+        </div>
+    </div>
+
+<!--Introduce section-->
+
+    <div class="introduce" id="introduce">
+        <div class="introduce-content">
+            <div class="introduce-text">
+                <h1>Hi! My name is <span class="name">Tamas Krisztian Kalman</span>. 
+                    I am a young and passionate individual who is looking for new 
+                    challenges in the remote job world. </h1> <br>
+                    <p> I was born and raised in Budapest but currently 
+                    I'm living in the Netherlands. I would like to think 
+                    of myself as being positive, energetic and someone 
+                    who is works well with people and as well as under 
+                    pressure. My programming skills consist of HTML, CSS, 
+                    Javascript, Git and Booststrap! I'm in the process of 
+                    learning TypeScript, Booststrap, React, Angular and 
+                    developing my knowledge of advanced Javascript. I am 
+                    eager to learn new skills and gain more experience in
+                    my career! Even though I take my work seriously, I like 
+                    to have a laugh and have fun in the process.</p>
+            </div>
+            <div class="introduce-img">
+                <div class="overlay">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Visible Project Section -->
+
+    <h1 class="project-text" id="projects">My projects</h1>
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="projects stopwatch" onclick="window.open('stopwatch.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stopwatch%2C_1810201155%2C_ako.jpg/1200px-Stopwatch%2C_1810201155%2C_ako.jpg">
+                <h3>Stopwatch</h3>
+                <p>Simple stopwatch with 3 buttons. Start, stop and reset.</p>
+            </div>
+            <div class="projects middle-project to-do" onclick="window.open('todo.html')">
+                <img src="https://www.jotform.com/blog/wp-content/uploads/2018/08/to-do-list-compressor.jpg">
+                <h3>To-Do</h3>
+                <p>I made the To-Do list with HTML, CSS and JS combination. Easy application what can be used as a daily application.</p>
+            </div>
+            <div class="projects timer" onclick="window.open('timer.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Farberware-Minute-Timer-White.jpg">
+                <h3>Timer</h3>
+                <p>Regular Stopwatch. The user choice from where to start to countdown with help of buttons.</p>
+            </div>
+            <div class="projects random-quote" id="below-row-projects" onclick="window.open('randomquotes.html')">
+                <img src="https://w0.peakpx.com/wallpaper/480/992/HD-wallpaper-we-do-lockscreens-background-motivational-quotes-inspirational-quotes-words-quotes-motivational-quotes-black.jpg">
+                <h3>Random Quote Machine</h3>
+                <p>With button click generate a new quote with the author and change the background color aswell!</p>
+            </div>
+            <div class="projects middle-project school-system" id="below-row-projects">
+                <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/School-Clipart/School_Board_Wallpaper.jpg?m=1507172109">
+                <h3>School system</h3>
+                <p>Coming soon...</p>
+            </div>
+            <div class="projects weather-app" id="below-row-projects">
+                <img src="https://wallpaper.dog/large/20542257.jpg">
+                <h3>Weather App</h3>
+                <p>Coming soon...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="show-more-div">
+        <button class="show-more">Show more...</button>
+    </div>
+
+<!-- Invisible Project Section --> 
+
+    <div class="hidden-project-container">
+        <div class="hidden-project-content">
+            <div class="projects stopwatch product" onclick="window.open('prod.html')">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZnVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+                <h3>Product Preview</h3>
+                <p>Describe of a good quality perfume in elegant and gently style.</p>
+            </div>
+            <div class="projects stopwatch nft" onclick="window.open('nft.html')">
+                <img src="https://images.unsplash.com/photo-1599249300675-c39f1dd2d6be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJhd3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+                <h3>NFT</h3>
+                <p>High quality NFT market place.</p>
+            </div>
+            <div class="projects stopwatch profile" onclick="window.open('profile.html')">
+                <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80">
+                <h3>Profile</h3>
+                <p>Simple profile with few stats.</p>
+            </div>
+            <div class="projects stopwatch columns" id="below-row-projects" onclick="window.open('3col.html')">
+                <img src="https://mobimg.b-cdn.net/v3/fetch/0f/0fa8553babd847e617f4f710ad1b889f.jpeg?w=1470&r=0.5625">
+                <h3>Splitting 3 Columns</h3>
+                <p>Example how I would split up 3 columns then brake it down for responsive.</p>
+            </div>
+            <div class="projects stopwatch anything" id="below-row-projects">
+                <img src="https://images.hdqwalls.com/wallpapers/bthumb/last-sky-light-4k-mt.jpg">
+                <h3>Can be you</h3>
+                <p>Simple of everything</p>
+            </div>
+            <div class="projects stopwatch qrcode" id="below-row-projects" onclick="window.open('qr.html')">
+                <img src="https://img.freepik.com/premium-vector/multicolor-vector-background-banner-fantasy-theme-qr-code_149326-2156.jpg">
+                <h3>QR Code</h3>
+                <p>Nice easy design around a QR code.</p>
+            </div>
+        </div>
+    </div>
+    <div class="show-less-div">
+        <button class="show-less">Show less...</button>
+    </div>
+
+<!-- Contact Section -->
+
+    <div id="contact-me" class="contact-section">
+        <div class="contact-section-header">
+            <h2>Start our journey tomorrow...</h2>
+            <p>How do you like your coffee? For me it's 2 sugars and a bit of milk.</p>
+        </div>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/tamaskrisztiankalman/" target="_blank" class="btn contact-details">
+                <i class="fa-brands fa-linkedin linkedin"></i>
+            </a>
+            <a id="profile-link" href="#" target="_blank" class="btn contact-details github">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://wa.me/+31627267846" target="_blank" class="btn contact-details whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:kalman.tamaskrisztian@gmail.com" class="btn contact-details email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a id="profile-link" href="https://www.facebook.com/kalmantomikaaaaa5/" target="_blank" class="btn contact-details facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a id="profile-link" href="#" target="_blank" class="btn contact-details download">
+                <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+
+        <script src="Script/index.js"></script>
+        <script src="https://kit.fontawesome.com/19807acfb1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
