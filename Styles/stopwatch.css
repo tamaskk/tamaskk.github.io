@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(images/stopwatch-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.content {
+    width: 500px;
+    height: 300px;
+}
+
+.time {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 6.5%;
+    padding-top: 50px;
+}
+
+.hourDiv, .minuteDiv, .secondDiv, .millisecondDiv {
+    background-color: #05102e;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hour, .minute, .second, .millisecond {
+    font-size: 2.5rem;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.start, .stop, .reset {
+    background-color: #05102e;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.hourDiv:hover, .minuteDiv:hover, .secondDiv:hover, .millisecondDiv:hover, .start:hover, .stop:hover, .reset:hover{
+    background-color: #071742;
+}
+
+@media (max-width: 500px) {
+    body {
+        align-items: flex-start;
+    }
+    .time {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0;
+        height: 225px;
+    }
+
+    .content {
+        width: 250px
+    }
+
+    .button {
+        display: block;
+        height: 225px;
+        padding-top: 50px;
+    }
+
+    .start, .stop, .reset { 
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .minuteDiv, .millisecondDiv {
+        margin-left: 20px;
+    }
+
+    .container {
+        margin-top: 175px;
+    }
+}

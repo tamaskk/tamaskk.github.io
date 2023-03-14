@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+hr {
+    border-color: hsl(215, 32%, 27%);
+}
+
+.price div {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.creator img {
+    width: 3rem;
+    border: 1px white solid;
+    border-radius: 50%;
+}
+
+.creator p {
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.creator span {
+    color: #fff;
+}
+
+.container {
+    max-width: 360px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 5px 10px 0;
+}
+
+.card {
+    padding: 18px;
+}
+
+.card .nft-pic {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 23px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.name, .descibe, .price, hr,
+.creator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name, .descibe, .price, .creator {
+    padding: 20px 0;
+}
+
+.describe {
+    line-height: 1.7rem;
+    font-weight: 300;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.time {
+    justify-content: flex-end;
+}
+
+.eth-pic {
+    width: 7%;
+}
+
+.time-left {
+    padding-left: 5px;
+}
+
+.time-pic {
+    width: 13%;
+}
+
+.creator {
+    display: flex;
+}
+
+.eth-price {
+    color: hsl(178, 100%, 50%);
+    padding-left: 10px;
+}

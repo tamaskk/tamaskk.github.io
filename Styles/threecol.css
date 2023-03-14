@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  height: 100vh;
+}
+
+.first-div h2, .second-div h2, .third-div h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding-bottom: 30px;
+} 
+
+.first-div img, .second-div img, .third-div img {
+  padding-bottom: 20px;
+}
+
+.first-div p, .second-div p, .third-div p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.75;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.first-div button, .second-div button, .third-div button {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  width: 170px;
+  padding: 17px;
+  border-radius: 40px;
+  margin-top: 25%;
+  text-decoration: none;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.first-div button {
+  color: hsl(31, 77%, 52%);
+}
+
+.second-div button {
+  color: hsl(184, 100%, 22%);
+}
+
+.third-div button {
+  color: hsl(179, 100%, 13%);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.grid {
+  display: flex;
+  height: 110%;
+  width: 52.5%;
+  max-width: 80%;
+}
+
+.first-div {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+
+.second-div {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.third-div {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 10px 10px 0;
+} 
+
+.first-div-elements, .second-div-elements, .third-div-elements {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+
+  }
+
+.first-div, .second-div, .third-div {
+  width: 70%;
+  height: 500px;
+  max-height: 100%;
+  max-width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.first-button:hover {
+  border: 2px solid white;
+  background-color: hsl(31, 77%, 52%);
+  color: white;
+  padding: 15px;
+}
+
+.second-button:hover {
+  border: 2px solid white;
+  background-color: hsl(184, 100%, 22%);
+  color: white;
+  padding: 15px;
+}
+
+.third-button:hover {
+  border: 2px solid white;
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+    padding: 15px;
+}
+
+@media (max-width: 1028px) {
+  .first-div p, .second-div p, .third-div p { 
+    font-size: 14px;
+  }
+
+  .first-div-elements button, .second-div-elements button, .third-div-elements button {
+    margin-top: 90px;
+  }
+
+  .first-div img, .second-div img, .third-div img {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .grid {
+    display: block;
+    width: 50%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .first-div, .second-div, .third-div {
+    width: 100%;
+  }
+
+  .first-div-elements, .second-div-elements, .third-div-elements {
+    padding-top: 90px;
+    padding-left: 50px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+
+  }
+
+  .first-div {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .third-div {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .first-div p, .second-div p, .third-div p { 
+    font-size: 12px;
+  }
+
+  .grid {
+  width: 100%;
+  }
+
+  .first-div, .second-div, .third-div {
+    width: 100%;
+  }
+
+  .first-div-elements button, .second-div-elements button, .third-div-elements button {
+    margin-top: 70px;
+  }
+
+  .first-div-elements, .second-div-elements, .third-div-elements {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+
+  }
+  
+}
